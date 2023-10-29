@@ -1,0 +1,13 @@
+{
+  "name": "test_server",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "AI dev test server on express,js",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
