@@ -4,3 +4,5 @@
 go_lang/.env
 
 test_server/app/node_modules/
+
+go_lang/.env.prod

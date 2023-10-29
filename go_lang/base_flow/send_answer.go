@@ -19,7 +19,7 @@ func sendAnswer(answer string, token string) error {
 	//Configure request
 	url := os.Getenv("API_URL") + "/answer/" + token
 	jsonData := []byte(`{
-		"answer": "` + answer + `"
+		"answer": ` + answer + `
 	}`)
 	request, err := http.NewRequest(http.MethodPost, url, bytes.NewBuffer(jsonData))
 	request.Header.Set("Content-Type", "application/json; charset=UTF-8")

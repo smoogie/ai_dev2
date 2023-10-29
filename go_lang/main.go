@@ -1,6 +1,9 @@
 package main
 
 import (
+	"ai_dev/c01/l04/blogger"
+	"ai_dev/c01/l04/moderation"
+	lo5 "ai_dev/c01/l05"
 	"ai_dev/c01/lo1"
 	"github.com/joho/godotenv"
 	"github.com/urfave/cli/v2"
@@ -18,6 +21,18 @@ func main() {
 			{
 				Name:   "c01l01",
 				Action: lo1.C01L01,
+			},
+			{
+				Name:   "c01l04_blogger",
+				Action: blogger.C01L04_blogger,
+			},
+			{
+				Name:   "c01l04_moderation",
+				Action: moderation.C01L04_moderation,
+			},
+			{
+				Name:   "c01l05",
+				Action: lo5.C01L05,
 			},
 		},
 	}

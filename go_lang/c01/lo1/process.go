@@ -20,5 +20,5 @@ func process(body []byte) (string, error) {
 	fmt.Println("response code:", string(responseJson.Code))
 	fmt.Println("response msg:", string(responseJson.Msg))
 	fmt.Println("response cookie:", string(responseJson.Cookie))
-	return string(responseJson.Cookie), nil
+	return `"` + string(responseJson.Cookie) + `"`, nil
 }
