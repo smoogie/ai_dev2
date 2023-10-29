@@ -9,8 +9,10 @@ const verifyTaskAnswer = function(req, res){
     if (task.length <= 0) {
         return
     }
-    const data = checkAnswer(task, req.body)
     console.log(`Received answer for ${task}`)
+    console.log(req.body)
+    const data = checkAnswer(task, req.body)
+    console.log(`Received answer validation`)
     console.log(data)
     res.send(data)
 };
