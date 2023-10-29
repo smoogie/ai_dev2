@@ -16,11 +16,11 @@ type answerResponse struct {
 }
 
 func sendAnswer(answer string, token string) error {
+	fmt.Println("---SEND ANSWER---")
 	//Configure request
 	url := os.Getenv("API_URL") + "/answer/" + token
-	jsonData := []byte(`{
-		"answer": ` + answer + `
-	}`)
+	jsonData := []byte(`{"answer": ` + answer + `}`)
+	fmt.Print("\n" + string(jsonData) + "\n")
 	request, err := http.NewRequest(http.MethodPost, url, bytes.NewBuffer(jsonData))
 	request.Header.Set("Content-Type", "application/json; charset=UTF-8")
 	if err != nil {

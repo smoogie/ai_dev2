@@ -16,6 +16,7 @@ type tokenResponse struct {
 }
 
 func getToken(task string) (string, error) {
+	fmt.Println("---GET TOKEN---")
 	//Configure request
 	apiKey := os.Getenv("API_KEY")
 	url := os.Getenv("API_URL") + "/token/" + task
@@ -45,8 +46,8 @@ func getToken(task string) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	fmt.Println("response code:", string(responseJson.Code))
-	fmt.Println("response msg:", string(responseJson.Msg))
+	fmt.Println("response code:", responseJson.Code)
+	fmt.Println("response msg:", responseJson.Msg)
 
 	return responseJson.Token, nil
 }
