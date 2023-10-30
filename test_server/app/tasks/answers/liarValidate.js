@@ -1,7 +1,8 @@
 const buildAnswerResponse = require("./buildAnswerResponse");
 const liarValidate = function(data) {
     const answer = data.answer
-    let isAnswerCorrect = false
+    //TODO: based on randomization from data generation validate if true/false
+    let isAnswerCorrect = data.answer === "NO"
     return buildAnswerResponse(isAnswerCorrect)
 }
 

@@ -14,6 +14,7 @@ const bloggerValidate = function(data) {
 
 function validateChapter(chapter, description) {
     //here we should validate if each chapter has correct text, but we simplify it to check length
+    //TODO: use AI to validate responses
     return (typeof chapter === 'string' && chapter.length > 100)
 }
 
