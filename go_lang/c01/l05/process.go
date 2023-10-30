@@ -15,13 +15,16 @@ Jeśli Twoje pytanie dotyczyło stolicy Polski, a w odpowiedzi otrzymasz spis za
 w Rzymie, to odpowiedź, którą należy wysłać do API to NO.
 */
 import (
+	"ai_dev/open_ai_help"
 	"encoding/json"
 	"fmt"
+	"github.com/sashabaranov/go-openai"
 )
 
 type respponseC01L05 struct {
-	Code int
-	Msg  string
+	Code   int
+	Msg    string
+	Answer string
 }
 
 func process(body []byte) (string, error) {
@@ -30,7 +33,27 @@ func process(body []byte) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	fmt.Println("response code:", string(responseJson.Code))
-	fmt.Println("response msg:", string(responseJson.Msg))
-	return "", nil
+	fmt.Println("response code:", responseJson.Code)
+	fmt.Println("response msg:", responseJson.Msg)
+	fmt.Println("response answer:", responseJson.Answer)
+
+	postedData := getPostData()
+	question := postedData["question"]
+	answer := responseJson.Answer
+	fmt.Println("OPEN AI ASK TO VALIDATE REQUEST")
+	systemPrompt := prepareSystemPrompt(question)
+	response, err := open_ai_help.SendBasePromptRequest(systemPrompt, answer, openai.GPT4)
+	return "\"" + response + "\"", err
+}
+
+func prepareSystemPrompt(question string) string {
+	return `You are the expert that review answers to the questions. You check if answer is valid for the question asked. 
+You only answer YES or NO.
+Assistant: What is the capitol of Poland
+User: Warsaw is capitol of Poland
+Assistant: YES
+Assistant: Who is the author of "Hyperion"
+User: Dan Burt
+Assistant: NO
+Assistant: ` + question
 }
