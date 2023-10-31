@@ -79,12 +79,12 @@ func generateChaptersString(outline []string) (string, error) {
 func generateChapters(outline []string) (string, error) {
 	fmt.Println("OPEN AI BLOG GENERATION")
 	userPrompt := prepareBlogChapterPrompt(outline)
-	chapters, err := open_ai_help.SendBasePromptRequest(systemPromptBlog, userPrompt, openai.GPT4)
+	chapters, err := open_ai_help.SendBasePromptRequest(systemPromptBlog, userPrompt, openai.GPT4, true)
 	return chapters, err
 }
 
 func formatChapters(blogPrompt string) (string, error) {
 	fmt.Println("OPEN AI CHAPTER FORMATTING")
-	chapters, err := open_ai_help.SendBasePromptRequest(systemPromptParser, blogPrompt, openai.GPT4)
+	chapters, err := open_ai_help.SendBasePromptRequest(systemPromptParser, blogPrompt, openai.GPT4, true)
 	return chapters, err
 }

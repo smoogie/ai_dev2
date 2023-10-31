@@ -1,4 +1,4 @@
-package lo5
+package liar
 
 /*
 wykonaj zadanie o nazwie liar. Jest to mechanizm, który mówi nie na temat
@@ -42,7 +42,7 @@ func process(body []byte) (string, error) {
 	answer := responseJson.Answer
 	fmt.Println("OPEN AI ASK TO VALIDATE REQUEST")
 	systemPrompt := prepareSystemPrompt(question)
-	response, err := open_ai_help.SendBasePromptRequest(systemPrompt, answer, openai.GPT4)
+	response, err := open_ai_help.SendBasePromptRequest(systemPrompt, answer, openai.GPT4, true)
 	return "\"" + response + "\"", err
 }
 

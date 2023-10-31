@@ -1,4 +1,4 @@
-package lo5
+package blogger
 
 import (
 	"ai_dev/base_flow"
@@ -6,8 +6,8 @@ import (
 	"github.com/urfave/cli/v2"
 )
 
-func C01L05(c *cli.Context) error {
-	err := base_flow.RunProcessWithPost("liar", process, getPostData)
+func Command(c *cli.Context) error {
+	err := base_flow.RunProcess("blogger", process)
 	if err != nil {
 		fmt.Printf("error: %s", err.Error())
 	}

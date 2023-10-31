@@ -1,4 +1,4 @@
-package blogger
+package helloapi
 
 import (
 	"ai_dev/base_flow"
@@ -6,8 +6,8 @@ import (
 	"github.com/urfave/cli/v2"
 )
 
-func C01L04_blogger(c *cli.Context) error {
-	err := base_flow.RunProcess("blogger", process)
+func Command(c *cli.Context) error {
+	err := base_flow.RunProcess("helloapi", process)
 	if err != nil {
 		fmt.Printf("error: %s", err.Error())
 	}

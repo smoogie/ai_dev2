@@ -1,4 +1,4 @@
-package lo1
+package liar
 
 import (
 	"ai_dev/base_flow"
@@ -6,8 +6,8 @@ import (
 	"github.com/urfave/cli/v2"
 )
 
-func C01L01(c *cli.Context) error {
-	err := base_flow.RunProcess("helloapi", process)
+func Command(c *cli.Context) error {
+	err := base_flow.RunProcessWithPost("liar", process, getPostData)
 	if err != nil {
 		fmt.Printf("error: %s", err.Error())
 	}

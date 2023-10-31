@@ -9,10 +9,12 @@ import (
 
 const contextSeparator = "\n================================================\n"
 
-func SendBasePromptRequest(system string, user string, model string) (string, error) {
+func SendBasePromptRequest(system string, user string, model string, enableLogin bool) (string, error) {
 	//prepare prompt
-	fmt.Print("System prompt:", contextSeparator, system, contextSeparator)
-	fmt.Print("User prompt:", contextSeparator, user, contextSeparator)
+	if enableLogin {
+		fmt.Print("System prompt:", contextSeparator, system, contextSeparator)
+		fmt.Print("User prompt:", contextSeparator, user, contextSeparator)
+	}
 	//send request to open ai
 	client := openai.NewClient(os.Getenv("OPEN_AI_KEY"))
 	resp, err := client.CreateChatCompletion(
@@ -37,6 +39,8 @@ func SendBasePromptRequest(system string, user string, model string) (string, er
 		return "", err
 	}
 	response := resp.Choices[0].Message.Content
-	fmt.Print("Open AI response:", contextSeparator, response, contextSeparator)
+	if enableLogin {
+		fmt.Print("Open AI response:", contextSeparator, response, contextSeparator)
+	}
 	return response, nil
 }

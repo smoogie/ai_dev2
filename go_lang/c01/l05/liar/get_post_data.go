@@ -1,4 +1,4 @@
-package lo5
+package liar
 
 func getPostData() map[string]string {
 	return map[string]string{
