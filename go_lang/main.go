@@ -6,6 +6,7 @@ import (
 	"ai_dev/c01/l04/moderation"
 	"ai_dev/c01/l05/liar"
 	"ai_dev/c02/l02/inprompt"
+	"ai_dev/c02/l03/embedding"
 	"github.com/joho/godotenv"
 	"github.com/urfave/cli/v2"
 	"os"
@@ -38,6 +39,10 @@ func main() {
 			{
 				Name:   "inprompt",
 				Action: inprompt.Command,
+			},
+			{
+				Name:   "embedding",
+				Action: embedding.Command,
 			},
 		},
 	}

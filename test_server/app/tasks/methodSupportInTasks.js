@@ -5,7 +5,8 @@ const MethodSupportedInTasks  = {
     "blogger" : [MethodGET],
     "moderation" : [MethodGET],
     "liar" : [MethodPOST],
-    "inprompt":[MethodGET]
+    "inprompt":[MethodGET],
+    "embedding":[MethodGET]
 }
 
 module.exports = {
