@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-func SendBEmbeddingRequest(textForEmbedding string) ([]float32, error) {
+func SendEmbeddingRequest(textForEmbedding string) ([]float32, error) {
 	client := openai.NewClient(os.Getenv("OPEN_AI_KEY"))
 	queryReq := openai.EmbeddingRequest{
 		Input: []string{textForEmbedding},

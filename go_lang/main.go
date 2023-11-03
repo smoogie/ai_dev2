@@ -7,6 +7,7 @@ import (
 	"ai_dev/c01/l05/liar"
 	"ai_dev/c02/l02/inprompt"
 	"ai_dev/c02/l03/embedding"
+	"ai_dev/c02/l04/whisper"
 	"github.com/joho/godotenv"
 	"github.com/urfave/cli/v2"
 	"os"
@@ -43,6 +44,10 @@ func main() {
 			{
 				Name:   "embedding",
 				Action: embedding.Command,
+			},
+			{
+				Name:   "whisper",
+				Action: whisper.Command,
 			},
 		},
 	}

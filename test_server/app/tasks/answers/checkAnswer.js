@@ -4,6 +4,7 @@ const moderation = require('./moderationValidate')
 const liar = require('./liarValidate')
 const inprompt = require('./inpromptValidate')
 const embedding = require('./embeddingValidate')
+const whisper = require('./whisperValidate')
 
 const mapping = {
     helloapi,
@@ -11,7 +12,8 @@ const mapping = {
     moderation,
     liar,
     inprompt,
-    embedding
+    embedding,
+    whisper
 }
 
 module.exports = (task, data) => mapping[task](data)

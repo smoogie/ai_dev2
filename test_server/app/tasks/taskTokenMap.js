@@ -4,7 +4,8 @@ const TaskTokenMap = {
     "moderation" : "ao9stwaghadjf87",
     "liar" : "8ywescsvdzw3vb",
     "inprompt": "afujef8nr43443434",
-    "embedding": "dsynfuy94578w8awcadstcg"
+    "embedding": "dsynfuy94578w8awcadstcg",
+    "whisper": "njbhu45hdvr"
 }
 
 module.exports = TaskTokenMap

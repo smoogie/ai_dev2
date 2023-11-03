@@ -41,6 +41,6 @@ func process(body []byte) (string, error) {
 
 func buildEmbedding(textForEmbedding string) ([]float32, error) {
 	fmt.Println("OPEN AI BUILD EMBEDDING")
-	response, err := open_ai_help.SendBEmbeddingRequest(textForEmbedding)
+	response, err := open_ai_help.SendEmbeddingRequest(textForEmbedding)
 	return response, err
 }

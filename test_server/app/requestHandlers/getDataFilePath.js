@@ -2,7 +2,6 @@ const getData = require('../tasks/data/getData')
 const getTaskFromToken = require('./getTaskFromToken')
 const {MethodSupportedInTasks, MethodGET} = require('../tasks/methodSupportInTasks')
 const {ReturnType, TypeJSON, TypeFile} = require('../tasks/dataTypeInTasks')
-const getFilePath = require('../tasks/data/getFilePath')
 /**
  * @param {*} req
  * @param {Request<P, ResBody, ReqBody, ReqQuery, LocalsObj>|http.ServerResponse} res
@@ -35,13 +34,10 @@ function returnJsonData(task, res) {
     res.send(data)
 }
 function returnFileData(task, res) {
-    const path = getFilePath(task)
-    const options = {
-        root: global.rootPath
-    };
+    const data = getData(task)
     console.log(`Returning data for ${task}`)
-    console.log(path)
-    res.sendFile(path, options);
+    console.log(data)
+    res.send(data)
 }
 
 module.exports = getTaskData
