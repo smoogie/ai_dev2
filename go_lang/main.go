@@ -8,6 +8,8 @@ import (
 	"ai_dev/c02/l02/inprompt"
 	"ai_dev/c02/l03/embedding"
 	"ai_dev/c02/l04/whisper"
+	"ai_dev/c02/l05/functions"
+	"ai_dev/c03/l01/rodo"
 	"github.com/joho/godotenv"
 	"github.com/urfave/cli/v2"
 	"os"
@@ -48,6 +50,14 @@ func main() {
 			{
 				Name:   "whisper",
 				Action: whisper.Command,
+			},
+			{
+				Name:   "functions",
+				Action: functions.Command,
+			},
+			{
+				Name:   "rodo",
+				Action: rodo.Command,
 			},
 		},
 	}

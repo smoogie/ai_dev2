@@ -8,7 +8,8 @@ const ReturnType = {
     "inprompt":TypeJSON,
     "embedding":TypeJSON,
     // "whisper" :TypeFile
-    "whisper" :TypeJSON
+    "whisper" :TypeJSON,
+    "functions":TypeJSON
 }
 
 module.exports = {

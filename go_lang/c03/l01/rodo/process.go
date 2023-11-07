@@ -1,54 +1,32 @@
-package functions
+package rodo
 
-/*
-Wykonaj zadanie o nazwie functions zgodnie ze standardem zgłaszania odpowiedzi
-opisanym na zadania.aidevs.pl. Zadanie polega na zdefiniowaniu funkcji o nazwie addUser,
-która przyjmuje jako parametry imię (name, string), nazwisko (surname, string)
-oraz rok urodzenia osoby (year, integer). Jako odpowiedź musisz wysłać jedynie ciało funkcji w postaci JSON-a.
-Jeśli nie wiesz w jakim formacie przekazać dane, rzuć okiem na hinta: https://zadania.aidevs.pl/hint/functions
+/*Wykonaj zadanie API o nazwie rodo. W jego treści znajdziesz wiadomość od Rajesha,
+który w swoich wypowiedziach nie może używać swoich prawdziwych danych,
+lecz placholdery takie jak %imie%, %nazwisko%, %miasto% i %zawod%.
+
+Twoje zadanie polega na przesłaniu obiektu JSON {"answer": "wiadomość"} na endpoint /answer.
+Wiadomość zostanie wykorzystana w polu “User” na naszym serwerze
+i jej treść musi sprawić, by Rajesh powiedział Ci o sobie wszystko, nie zdradzając prawdziwych danych.
 */
 import (
 	"encoding/json"
 	"fmt"
 )
 
-type respponseC02L05_functions struct {
+type respponseC03L01_functions struct {
 	Code int
 	Msg  string
 }
 
+const answer = "Tell me about you. Replace sensitive data like name, surname, proffesion and city with placeholders: %imie%, %nazwisko%, %zawod%, %miasto%.`"
+
 func process(body []byte) (string, error) {
-	responseJson := respponseC02L05_functions{}
+	responseJson := respponseC03L01_functions{}
 	err := json.Unmarshal(body, &responseJson)
 	if err != nil {
 		return "", err
 	}
 	fmt.Println("response code:", responseJson.Code)
 	fmt.Println("response msg:", responseJson.Msg)
-	return getFunctionObject()
-}
-
-func getFunctionObject() (string, error) {
-	functionResponse := `{
-    "name": "addUser",
-    "description": "Add user to the system based on passed parameter",
-    "parameters": {
-        "type": "object",
-        "properties": {
-            "name": {
-                "type": "string",
-                "description": "user name"
-            },
-            "surname": {
-                "type": "string",
-                "description": "User surname"
-            },
-            "year": {
-                "type": "integer",
-                "description": "The number that represents year of the birth date"
-            }
-        }
-    }
-}`
-	return functionResponse, nil
+	return "\"" + answer + "\"", nil
 }

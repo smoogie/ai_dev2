@@ -1,4 +1,4 @@
-package rodo
+package functions
 
 import (
 	"ai_dev/base_flow"
@@ -7,7 +7,7 @@ import (
 )
 
 func Command(c *cli.Context) error {
-	err := base_flow.RunProcess("rodo", process)
+	err := base_flow.RunProcess("functions", process)
 	if err != nil {
 		fmt.Printf("error: %s", err.Error())
 	}

@@ -1,3 +1,4 @@
+const functions = require("./data/functionsData");
 const MethodGET = "get"
 const MethodPOST = "post"
 const MethodSupportedInTasks  = {
@@ -7,7 +8,8 @@ const MethodSupportedInTasks  = {
     "liar" : [MethodPOST],
     "inprompt":[MethodGET],
     "embedding":[MethodGET],
-    "whisper":[MethodGET]
+    "whisper":[MethodGET],
+    "functions":[MethodGET]
 }
 
 module.exports = {

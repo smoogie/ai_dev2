@@ -4,6 +4,7 @@ const moderation = require('./moderationData')
 const inprompt = require('./inpromptData')
 const embedding = require('./embeddingData')
 const whisper = require('./whisperData')
+const functions = require('./functionsData')
 
 const mapping = {
     helloapi,
@@ -11,7 +12,8 @@ const mapping = {
     moderation,
     inprompt,
     embedding,
-    whisper
+    whisper,
+    functions
 }
 
 module.exports = (task) => mapping[task]
