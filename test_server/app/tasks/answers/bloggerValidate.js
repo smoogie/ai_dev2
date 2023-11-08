@@ -1,5 +1,5 @@
 const buildAnswerResponse = require("./buildAnswerResponse");
-const bloggerData = require('../data/bloggerData')
+const bloggerData = require('../data/json/bloggerData')
 const bloggerValidate = function(data) {
     const answer = data.answer
     let isAnswerCorrect = false

@@ -5,6 +5,10 @@ const liar = require('./liarValidate')
 const inprompt = require('./inpromptValidate')
 const embedding = require('./embeddingValidate')
 const whisper = require('./whisperValidate')
+const functions = require('./functionsValidate')
+const rodo = require('./rodoValidate')
+const scraper = require('./scraperValidate')
+const whoami = require('./whoamiValidate')
 
 const mapping = {
     helloapi,
@@ -13,7 +17,11 @@ const mapping = {
     liar,
     inprompt,
     embedding,
-    whisper
+    whisper,
+    functions,
+    rodo,
+    scraper,
+    whoami
 }
 
 module.exports = (task, data) => mapping[task](data)

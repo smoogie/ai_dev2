@@ -1,5 +1,6 @@
 const TypeJSON = "json"
 const TypeFile = "file"
+const TypeFunction = "function"
 const ReturnType = {
     "helloapi" : TypeJSON,
     "blogger" : TypeJSON,
@@ -9,11 +10,15 @@ const ReturnType = {
     "embedding":TypeJSON,
     // "whisper" :TypeFile
     "whisper" :TypeJSON,
-    "functions":TypeJSON
+    "functions":TypeJSON,
+    "rodo":TypeJSON,
+    "scraper":TypeJSON,
+    "whoami":TypeFunction
 }
 
 module.exports = {
     TypeJSON,
     TypeFile,
+    TypeFunction,
     ReturnType
 }

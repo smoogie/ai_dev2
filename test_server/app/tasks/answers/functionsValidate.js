@@ -27,4 +27,4 @@ const functionsValidate = function(data) {
     return buildAnswerResponse(hasCorrectName)
 }
 
-module.exports = whisperValidate
+module.exports = functionsValidate

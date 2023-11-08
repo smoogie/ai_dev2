@@ -1,4 +1,4 @@
-const correctAnswer = require('../data/helloapiData').cookie
+const correctAnswer = require('../data/json/helloapiData').cookie
 const buildAnswerResponse = require('./buildAnswerResponse')
 const helloapiValidate = function(data) {
     const answer = data.answer

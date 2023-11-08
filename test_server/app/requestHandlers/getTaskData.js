@@ -1,8 +1,9 @@
 const getData = require('../tasks/data/getData')
 const getTaskFromToken = require('./getTaskFromToken')
 const {MethodSupportedInTasks, MethodGET} = require('../tasks/methodSupportInTasks')
-const {ReturnType, TypeJSON, TypeFile} = require('../tasks/dataTypeInTasks')
+const {ReturnType, TypeJSON, TypeFile, TypeFunction} = require('../tasks/dataTypeInTasks')
 const getFilePath = require('../tasks/data/getFilePath')
+const getFunctionData = require('../tasks/data/getFunctionData')
 /**
  * @param {*} req
  * @param {Request<P, ResBody, ReqBody, ReqQuery, LocalsObj>|http.ServerResponse} res
@@ -23,6 +24,9 @@ const getTaskData = function(req, res){
         case TypeFile:
             returnFileData(task, res)
             break;
+        case TypeFunction:
+            returnFunctionData(task, res)
+            break;
         default:
             res.status(404).send()
     }
@@ -42,6 +46,15 @@ function returnFileData(task, res) {
     console.log(`Returning data for ${task}`)
     console.log(path)
     res.sendFile(path, options);
+}
+
+
+function returnFunctionData(task, res) {
+    const dataFunction = getFunctionData(task)
+    const data = dataFunction()
+    console.log(`Returning data for ${task}`)
+    console.log(data)
+    res.send(data)
 }
 
 module.exports = getTaskData
