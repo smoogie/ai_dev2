@@ -15,7 +15,7 @@ type tokenResponse struct {
 	Token string
 }
 
-func getToken(task string) (string, error) {
+func GetToken(task string) (string, error) {
 	fmt.Println("---GET TOKEN---")
 	//Configure request
 	apiKey := os.Getenv("API_KEY")

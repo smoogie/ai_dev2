@@ -7,6 +7,7 @@ const whisper = require('./json/whisperData')
 const functions = require('./json/functionsData')
 const rodo = require('./json/rodoData')
 const scraper = require('./json/scraperData')
+const search = require('./json/searchData')
 
 const mapping = {
     helloapi,
@@ -17,7 +18,8 @@ const mapping = {
     whisper,
     functions,
     rodo,
-    scraper
+    scraper,
+    search
 }
 
 module.exports = (task) => mapping[task]

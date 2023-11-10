@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-func getData(token string) ([]byte, error) {
+func GetData(token string) ([]byte, error) {
 	fmt.Println("---GET DATA---")
 	//configure request
 	url := os.Getenv("API_URL") + "/task/" + token

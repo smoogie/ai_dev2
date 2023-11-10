@@ -13,7 +13,8 @@ const ReturnType = {
     "functions":TypeJSON,
     "rodo":TypeJSON,
     "scraper":TypeJSON,
-    "whoami":TypeFunction
+    "whoami":TypeFunction,
+    "search":TypeJSON
 }
 
 module.exports = {

@@ -15,7 +15,7 @@ type answerResponse struct {
 	Note string
 }
 
-func sendAnswer(answer string, token string) error {
+func SendAnswer(answer string, token string) error {
 	fmt.Println("---SEND ANSWER---")
 	//Configure request
 	url := os.Getenv("API_URL") + "/answer/" + token

@@ -10,7 +10,8 @@ const TaskTokenMap = {
     "functions": "z0os9idcgjvybrdth",
     "rodo": "warjcf8shfv",
     "scraper": "fachs7xbhzc",
-    "whoami":"zx08w8ieaxdf8gwkzfc"
+    "whoami":"zx08w8ieaxdf8gwkzfc",
+    "search":"mn023drtv775tygvcghgkl34f"
 }
 
 module.exports = TaskTokenMap

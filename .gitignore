@@ -8,3 +8,11 @@ test_server/app/node_modules/
 go_lang/.env.prod
 
 go_lang/ai_dev
+
+additional_task_resources/newsletter_search/.env
+
+additional_task_resources/databases/qdrant_data/
+
+additional_task_resources/databases/my-db/
+
+additional_task_resources/newsletter_search/newsletter_search

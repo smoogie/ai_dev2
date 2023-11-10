@@ -3,7 +3,7 @@ package base_flow
 import "fmt"
 
 func RunProcessFile(task string, processor func(string) (string, error)) error {
-	token, err := getToken(task)
+	token, err := GetToken(task)
 	if err != nil {
 		return err
 	}
@@ -18,5 +18,5 @@ func RunProcessFile(task string, processor func(string) (string, error)) error {
 		return err
 	}
 
-	return sendAnswer(answer, token)
+	return SendAnswer(answer, token)
 }

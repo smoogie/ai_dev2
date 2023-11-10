@@ -1,14 +1,15 @@
-const helloapi = require('./helloapiValidate')
-const blogger = require('./bloggerValidate')
-const moderation = require('./moderationValidate')
-const liar = require('./liarValidate')
-const inprompt = require('./inpromptValidate')
-const embedding = require('./embeddingValidate')
-const whisper = require('./whisperValidate')
-const functions = require('./functionsValidate')
-const rodo = require('./rodoValidate')
-const scraper = require('./scraperValidate')
-const whoami = require('./whoamiValidate')
+const helloapi = require('./validators/helloapiValidate')
+const blogger = require('./validators/bloggerValidate')
+const moderation = require('./validators/moderationValidate')
+const liar = require('./validators/liarValidate')
+const inprompt = require('./validators/inpromptValidate')
+const embedding = require('./validators/embeddingValidate')
+const whisper = require('./validators/whisperValidate')
+const functions = require('./validators/functionsValidate')
+const rodo = require('./validators/rodoValidate')
+const scraper = require('./validators/scraperValidate')
+const whoami = require('./validators/whoamiValidate')
+const search = require('./validators/searchValidate')
 
 const mapping = {
     helloapi,
@@ -21,7 +22,8 @@ const mapping = {
     functions,
     rodo,
     scraper,
-    whoami
+    whoami,
+    search
 }
 
 module.exports = (task, data) => mapping[task](data)

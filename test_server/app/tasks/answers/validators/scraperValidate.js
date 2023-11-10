@@ -1,4 +1,4 @@
-const buildAnswerResponse = require("./buildAnswerResponse");
+const buildAnswerResponse = require("../buildAnswerResponse");
 
 const scraperValidate = function(data) {
     const answer = data.answer

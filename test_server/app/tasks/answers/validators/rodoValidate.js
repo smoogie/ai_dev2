@@ -1,4 +1,4 @@
-const buildAnswerResponse = require("./buildAnswerResponse");
+const buildAnswerResponse = require("../buildAnswerResponse");
 
 const rodoValidate = function(data) {
     const answer = data.answer

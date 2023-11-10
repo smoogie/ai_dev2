@@ -10,6 +10,9 @@ import (
 	"ai_dev/c02/l04/whisper"
 	"ai_dev/c02/l05/functions"
 	"ai_dev/c03/l01/rodo"
+	"ai_dev/c03/l02/scraper"
+	"ai_dev/c03/l03/whoami"
+	"ai_dev/c03/l04/search"
 	"github.com/joho/godotenv"
 	"github.com/urfave/cli/v2"
 	"os"
@@ -58,6 +61,18 @@ func main() {
 			{
 				Name:   "rodo",
 				Action: rodo.Command,
+			},
+			{
+				Name:   "scraper",
+				Action: scraper.Command,
+			},
+			{
+				Name:   "whoami",
+				Action: whoami.Command,
+			},
+			{
+				Name:   "search",
+				Action: search.Command,
 			},
 		},
 	}

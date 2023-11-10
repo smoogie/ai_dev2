@@ -1,4 +1,4 @@
-const buildAnswerResponse = require("./buildAnswerResponse");
+const buildAnswerResponse = require("../buildAnswerResponse");
 const embeddingValidate = function(data) {
     const answer = data.answer
     //TODO: maybe check if correct values?

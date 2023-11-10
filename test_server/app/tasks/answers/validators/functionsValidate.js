@@ -1,4 +1,4 @@
-const buildAnswerResponse = require("./buildAnswerResponse");
+const buildAnswerResponse = require("../buildAnswerResponse");
 const exampleFunctionObject = {
     name: "addUser",
     description: "",

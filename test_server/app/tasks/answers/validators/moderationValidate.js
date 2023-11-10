@@ -1,4 +1,4 @@
-const buildAnswerResponse = require("./buildAnswerResponse");
+const buildAnswerResponse = require("../buildAnswerResponse");
 const correctAnswer = [0,1,1,1]
 const moderationValidate = function(data) {
     const answer = data.answer

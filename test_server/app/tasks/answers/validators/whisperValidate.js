@@ -1,4 +1,4 @@
-const buildAnswerResponse = require("./buildAnswerResponse");
+const buildAnswerResponse = require("../buildAnswerResponse");
 const transcription = "Test transkrypcji do transkrypcji. Raz, dwa, trzy. Teraz ty!"
 const whisperValidate = function(data) {
     const answer = data.answer
