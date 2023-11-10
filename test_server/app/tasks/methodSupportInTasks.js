@@ -13,7 +13,8 @@ const MethodSupportedInTasks  = {
     "rodo":[MethodGET],
     "scraper":[MethodGET],
     "whoami":[MethodGET],
-    "search":[MethodGET]
+    "search":[MethodGET],
+    "people":[MethodGET]
 }
 
 module.exports = {

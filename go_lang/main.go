@@ -13,6 +13,7 @@ import (
 	"ai_dev/c03/l02/scraper"
 	"ai_dev/c03/l03/whoami"
 	"ai_dev/c03/l04/search"
+	"ai_dev/c03/l05/people"
 	"github.com/joho/godotenv"
 	"github.com/urfave/cli/v2"
 	"os"
@@ -73,6 +74,10 @@ func main() {
 			{
 				Name:   "search",
 				Action: search.Command,
+			},
+			{
+				Name:   "people",
+				Action: people.Command,
 			},
 		},
 	}

@@ -9,14 +9,6 @@ Twoje zapytania, a do tego serwer odcina dostęp nieznanym przeglądarkom intern
 Twoja aplikacja musi obsłużyć każdy z napotkanych błędów. Pamiętaj, że pytania,
 jak i teksty źródłowe, są losowe, więc nie zakładaj, że uruchamiając aplikację kilka razy,
 za każdym razem zapytamy Cię o to samo i będziemy pracować na tym samym artykule.
-
-
-{
-	"code": 0,
-	"msg": "Return answer for the question in POLISH language, based on provided article. Maximum length for the answer is 200 characters",
-	"input": "https:\/\/zadania.aidevs.pl\/text_pizza_history.txt",
-	"question": "z którego roku pochodzi łaciński dokument, który pierwszy raz wspomina o pizzy? "
-}
 */
 import (
 	"ai_dev/base_flow"

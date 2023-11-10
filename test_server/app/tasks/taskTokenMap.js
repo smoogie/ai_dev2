@@ -11,7 +11,8 @@ const TaskTokenMap = {
     "rodo": "warjcf8shfv",
     "scraper": "fachs7xbhzc",
     "whoami":"zx08w8ieaxdf8gwkzfc",
-    "search":"mn023drtv775tygvcghgkl34f"
+    "search":"mn023drtv775tygvcghgkl34f",
+    "people":"zs8fwe4hkjszr"
 }
 
 module.exports = TaskTokenMap

@@ -8,6 +8,7 @@ const functions = require('./json/functionsData')
 const rodo = require('./json/rodoData')
 const scraper = require('./json/scraperData')
 const search = require('./json/searchData')
+const people = require('./json/peopleData')
 
 const mapping = {
     helloapi,
@@ -19,7 +20,8 @@ const mapping = {
     functions,
     rodo,
     scraper,
-    search
+    search,
+    people
 }
 
 module.exports = (task) => mapping[task]

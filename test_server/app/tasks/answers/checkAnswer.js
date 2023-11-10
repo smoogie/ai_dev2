@@ -10,6 +10,7 @@ const rodo = require('./validators/rodoValidate')
 const scraper = require('./validators/scraperValidate')
 const whoami = require('./validators/whoamiValidate')
 const search = require('./validators/searchValidate')
+const people = require('./validators/peopleValidate')
 
 const mapping = {
     helloapi,
@@ -23,7 +24,8 @@ const mapping = {
     rodo,
     scraper,
     whoami,
-    search
+    search,
+    people
 }
 
 module.exports = (task, data) => mapping[task](data)
