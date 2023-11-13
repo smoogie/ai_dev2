@@ -15,7 +15,8 @@ const ReturnType = {
     "scraper":TypeJSON,
     "whoami":TypeFunction,
     "search":TypeJSON,
-    "people":TypeJSON
+    "people":TypeJSON,
+    "knowledge":TypeFunction
 }
 
 module.exports = {

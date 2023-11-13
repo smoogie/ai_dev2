@@ -14,7 +14,8 @@ const MethodSupportedInTasks  = {
     "scraper":[MethodGET],
     "whoami":[MethodGET],
     "search":[MethodGET],
-    "people":[MethodGET]
+    "people":[MethodGET],
+    "knowledge":[MethodGET]
 }
 
 module.exports = {

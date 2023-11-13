@@ -14,6 +14,7 @@ import (
 	"ai_dev/c03/l03/whoami"
 	"ai_dev/c03/l04/search"
 	"ai_dev/c03/l05/people"
+	knowledge "ai_dev/c04/l01/knowledge"
 	"github.com/joho/godotenv"
 	"github.com/urfave/cli/v2"
 	"os"
@@ -78,6 +79,10 @@ func main() {
 			{
 				Name:   "people",
 				Action: people.Command,
+			},
+			{
+				Name:   "knowledge",
+				Action: knowledge.Command,
 			},
 		},
 	}
