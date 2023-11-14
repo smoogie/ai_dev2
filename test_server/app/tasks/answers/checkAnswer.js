@@ -12,6 +12,7 @@ const whoami = require('./validators/whoamiValidate')
 const search = require('./validators/searchValidate')
 const people = require('./validators/peopleValidate')
 const knowledge = require('./validators/knowledgeValidate')
+const tools = require('./validators/toolsValidate')
 
 const mapping = {
     helloapi,
@@ -27,7 +28,8 @@ const mapping = {
     whoami,
     search,
     people,
-    knowledge
+    knowledge,
+    tools
 }
 
 module.exports = (task, data) => mapping[task](data)

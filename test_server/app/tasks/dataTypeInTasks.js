@@ -16,7 +16,8 @@ const ReturnType = {
     "whoami":TypeFunction,
     "search":TypeJSON,
     "people":TypeJSON,
-    "knowledge":TypeFunction
+    "knowledge":TypeFunction,
+    "tools":TypeFunction
 }
 
 module.exports = {
