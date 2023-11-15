@@ -17,7 +17,8 @@ const ReturnType = {
     "search":TypeJSON,
     "people":TypeJSON,
     "knowledge":TypeFunction,
-    "tools":TypeFunction
+    "tools":TypeFunction,
+    "gnome":TypeFunction
 }
 
 module.exports = {

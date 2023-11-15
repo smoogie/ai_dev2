@@ -16,6 +16,7 @@ import (
 	"ai_dev/c03/l05/people"
 	knowledge "ai_dev/c04/l01/knowledge"
 	"ai_dev/c04/l02/tools"
+	gnome "ai_dev/c04/l03/tools"
 	"github.com/joho/godotenv"
 	"github.com/urfave/cli/v2"
 	"os"
@@ -88,6 +89,10 @@ func main() {
 			{
 				Name:   "tools",
 				Action: tools.Command,
+			},
+			{
+				Name:   "gnome",
+				Action: gnome.Command,
 			},
 		},
 	}

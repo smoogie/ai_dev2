@@ -13,6 +13,7 @@ const search = require('./validators/searchValidate')
 const people = require('./validators/peopleValidate')
 const knowledge = require('./validators/knowledgeValidate')
 const tools = require('./validators/toolsValidate')
+const gnome = require('./validators/gnomeValidate')
 
 const mapping = {
     helloapi,
@@ -29,7 +30,8 @@ const mapping = {
     search,
     people,
     knowledge,
-    tools
+    tools,
+    gnome
 }
 
 module.exports = (task, data) => mapping[task](data)
