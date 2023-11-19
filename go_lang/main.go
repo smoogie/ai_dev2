@@ -17,6 +17,8 @@ import (
 	knowledge "ai_dev/c04/l01/knowledge"
 	"ai_dev/c04/l02/tools"
 	gnome "ai_dev/c04/l03/tools"
+	"ai_dev/c04/l04/ownapi"
+	"ai_dev/c04/l05/ownapipro"
 	"github.com/joho/godotenv"
 	"github.com/urfave/cli/v2"
 	"os"
@@ -93,6 +95,14 @@ func main() {
 			{
 				Name:   "gnome",
 				Action: gnome.Command,
+			},
+			{
+				Name:   "ownapi",
+				Action: ownapi.Command,
+			},
+			{
+				Name:   "ownapipro",
+				Action: ownapipro.Command,
 			},
 		},
 	}
