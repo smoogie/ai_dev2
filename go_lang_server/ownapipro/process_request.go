@@ -13,17 +13,17 @@ func ProcessRequest(response http.ResponseWriter, req *http.Request) {
 	private_api_tasks_help.BaseRequestProcess(response, req, processMessage)
 }
 func processMessage(conversation conversation_help.PrivateApiConversation, message string) (string, error) {
-	userMassage := conversation_help.Message{Sender: "user", Body: message}
+	userMassage := conversation_help.Message{Sender: conversation_help.SenderUser, Body: message}
 	conversation.History = append(conversation.History, userMassage)
 	err := conversation_help.UpdateConversation(conversation)
 	if err != nil {
 		return "", err
 	}
-	response, err := getResponse(message)
+	response, err := getResponse(conversation.History, message)
 	if err != nil {
 		return "", err
 	}
-	systemMassage := conversation_help.Message{Sender: "assistant", Body: response}
+	systemMassage := conversation_help.Message{Sender: conversation_help.SenderAssistant, Body: response}
 	conversation.History = append(conversation.History, systemMassage)
 	err = conversation_help.UpdateConversation(conversation)
 	if err != nil {
@@ -32,8 +32,8 @@ func processMessage(conversation conversation_help.PrivateApiConversation, messa
 	return response, nil
 }
 
-func getResponse(question string) (string, error) {
+func getResponse(history conversation_help.History, question string) (string, error) {
 	fmt.Println("OPEN AI ANSWER QUESTION")
 	systemPrompt := ""
-	return open_ai_help.SendBasePromptRequest(systemPrompt, question, openai.GPT4, true)
+	return open_ai_help.SendBasePromptRequestWithHistory(history, systemPrompt, question, openai.GPT4, true)
 }

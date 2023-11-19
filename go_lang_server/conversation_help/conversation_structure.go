@@ -19,6 +19,9 @@ type Message struct {
 	Body   string
 }
 
+const SenderUser = "user"
+const SenderAssistant = "assistant"
+
 func (h History) Value() (driver.Value, error) {
 	return json.Marshal(h) // return json marshalled value
 }

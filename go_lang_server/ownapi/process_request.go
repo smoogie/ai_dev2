@@ -14,7 +14,7 @@ func ProcessRequest(response http.ResponseWriter, req *http.Request) {
 }
 
 func processMessage(conversation conversation_help.PrivateApiConversation, message string) (string, error) {
-	userMassage := conversation_help.Message{Sender: "user", Body: message}
+	userMassage := conversation_help.Message{Sender: conversation_help.SenderUser, Body: message}
 	conversation.History = append(conversation.History, userMassage)
 	err := conversation_help.UpdateConversation(conversation)
 	if err != nil {
@@ -24,7 +24,7 @@ func processMessage(conversation conversation_help.PrivateApiConversation, messa
 	if err != nil {
 		return "", err
 	}
-	systemMassage := conversation_help.Message{Sender: "assistant", Body: response}
+	systemMassage := conversation_help.Message{Sender: conversation_help.SenderAssistant, Body: response}
 	conversation.History = append(conversation.History, systemMassage)
 	err = conversation_help.UpdateConversation(conversation)
 	if err != nil {
