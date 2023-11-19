@@ -71,6 +71,21 @@ people_data create-mysql-table
 people_data fill-data
 ```
 
+##### Data structure for tasks with own private api like ownapi, ownapipro
+Some tasks require additional private api, those tasks use also MySQL.
+
+There is a go srcipt to create require table. subdirectory: private_api_setup
+
+You need to copy .env.example to .env and adjust it
+
+After you fill in .env and started databases locally you can run script.
+```
+go get
+go build
+chmod +x private_api_setup
+private_api_setup create-mysql-table
+```
+
 ### Go lang
 directory: go_lang
 ```
@@ -80,3 +95,14 @@ chmod +x ai_dev
 ai_dev cXXlXX
 ```
 cXXlXX replace with lab number, for example c01l01
+
+
+Part of the tasks require private API that is used by ai_dev tests servers. You can find that server in other directory, Make sure to run it before you run specific commands in main cli.
+
+directory: go_lang_server
+```
+go get
+go build
+chmos +x ai_dev_private_api
+ai_dev_private_api
+```

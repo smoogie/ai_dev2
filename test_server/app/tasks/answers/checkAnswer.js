@@ -14,6 +14,8 @@ const people = require('./validators/peopleValidate')
 const knowledge = require('./validators/knowledgeValidate')
 const tools = require('./validators/toolsValidate')
 const gnome = require('./validators/gnomeValidate')
+const ownapi = require('./validators/ownapiValidate')
+const ownapipro = require('./validators/ownapiproValidate')
 
 const mapping = {
     helloapi,
@@ -31,7 +33,9 @@ const mapping = {
     people,
     knowledge,
     tools,
-    gnome
+    gnome,
+    ownapi,
+    ownapipro
 }
 
 module.exports = (task, data) => mapping[task](data)

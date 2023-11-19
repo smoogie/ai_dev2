@@ -17,7 +17,9 @@ const MethodSupportedInTasks  = {
     "people":[MethodGET],
     "knowledge":[MethodGET],
     "tools":[MethodGET],
-    "gnome":[MethodGET]
+    "gnome":[MethodGET],
+    "ownapi":[MethodGET],
+    "ownapipro":[MethodGET]
 }
 
 module.exports = {

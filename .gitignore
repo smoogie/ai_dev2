@@ -18,3 +18,13 @@ additional_task_resources/databases/my-db/
 additional_task_resources/newsletter_search/newsletter_search
 /additional_task_resources/people_data/.env
 /additional_task_resources/people_data/people_data
+
+additional_task_resources/private_api_setup/.env
+
+go_lang_server/.env
+
+additional_task_resources/private_api_setup/private_api_setup
+
+go_lang_server/.env.prod
+
+go_lang_server/ai_dev_private_api

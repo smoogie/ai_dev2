@@ -94,6 +94,14 @@ func main() {
 				Name:   "gnome",
 				Action: gnome.Command,
 			},
+			{
+				Name:   "ownapi",
+				Action: gnome.Command,
+			},
+			{
+				Name:   "ownapipro",
+				Action: gnome.Command,
+			},
 		},
 	}
 	if err := app.Run(os.Args); err != nil {

@@ -16,6 +16,8 @@ const TaskTokenMap = {
     "knowledge":"e5b6xdfgzkrrs89r",
     "tools":"s8vyyea8gvhsvsobrstjhsrvtdw324",
     "gnome":"98df98f4bnv4988tyf4unmmvbou4",
+    "ownapi":"210i9drtjoifdxv9u8nwac",
+    "ownapipro":"aqweadr99876xvgckljhgufy3465"
 }
 
 module.exports = TaskTokenMap
