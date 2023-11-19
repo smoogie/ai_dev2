@@ -11,7 +11,7 @@ import (
 const initSql = `CREATE TABLE private_api_conversation (
     id INT UNSIGNED AUTO_INCREMENT NOT NULL,
     uuid text DEFAULT NULL,
-    history JSON DEFAULT NULL,
+    history JSON NOT NULL DEFAULT (JSON_ARRAY()),
     PRIMARY KEY(id)
 )
 DEFAULT CHARACTER SET utf8mb4

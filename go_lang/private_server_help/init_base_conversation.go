@@ -3,6 +3,7 @@ package private_server_help
 import (
 	"database/sql"
 	"fmt"
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/google/uuid"
 	"os"
 )
