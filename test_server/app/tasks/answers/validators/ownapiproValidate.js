@@ -18,7 +18,7 @@ const queations = [
     "Jestem Franek.",
     "Jaka mam na imie?",
     "Gdzie jest Amazonka?",
-    "Ma 30 lat?",
+    "Mam 30 lat!",
     "Ile mam lat?"
 ]
 
