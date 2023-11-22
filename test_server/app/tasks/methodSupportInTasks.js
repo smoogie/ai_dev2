@@ -20,7 +20,8 @@ const MethodSupportedInTasks  = {
     "gnome":[MethodGET],
     "ownapi":[MethodGET],
     "ownapipro":[MethodGET],
-    "meme":[MethodGET]
+    "optimaldb":[MethodGET],
+    "google":[MethodGET]
 }
 
 module.exports = {

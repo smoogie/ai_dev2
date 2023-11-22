@@ -12,6 +12,8 @@ const people = require('./json/peopleData')
 const ownapi = require('./json/ownapiData')
 const ownapipro = require('./json/ownapiproData')
 const meme = require('./json/memeData')
+const optimaldb = require('./json/optimaldbData')
+
 
 const mapping = {
     helloapi,
@@ -27,7 +29,8 @@ const mapping = {
     people,
     ownapi,
     ownapipro,
-    meme
+    meme,
+    optimaldb
 }
 
 module.exports = (task) => mapping[task]

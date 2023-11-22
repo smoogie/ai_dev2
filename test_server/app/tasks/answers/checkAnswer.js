@@ -17,6 +17,8 @@ const gnome = require('./validators/gnomeValidate')
 const ownapi = require('./validators/ownapiValidate')
 const ownapipro = require('./validators/ownapiproValidate')
 const meme = require('./validators/memeValidate')
+const optimaldb = require('./validators/optimaldbValidate')
+const google = require('./validators/googleValidate')
 
 const mapping = {
     helloapi,
@@ -37,7 +39,9 @@ const mapping = {
     gnome,
     ownapi,
     ownapipro,
-    meme
+    meme,
+    optimaldb,
+    google
 }
 
 module.exports = (task, data) => mapping[task](data)

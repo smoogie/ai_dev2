@@ -21,7 +21,9 @@ const ReturnType = {
     "gnome":TypeFunction,
     "ownapi":TypeJSON,
     "ownapipro":TypeJSON,
-    "meme":TypeJSON
+    "meme":TypeJSON,
+    "optimaldb":TypeJSON,
+    "google":TypeJSON
 }
 
 module.exports = {

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"ai_dev_private_api/google"
 	"ai_dev_private_api/ownapi"
 	"ai_dev_private_api/ownapipro"
 	"fmt"
@@ -20,6 +21,7 @@ func main() {
 	serverRouter := mux.NewRouter()
 	serverRouter.HandleFunc("/ownapi/{uuid}", ownapi.ProcessRequest).Methods("POST")
 	serverRouter.HandleFunc("/ownapipro/{uuid}", ownapipro.ProcessRequest).Methods("POST")
+	serverRouter.HandleFunc("/google/{uuid}", google.ProcessRequest).Methods("POST")
 	portNum := os.Getenv("PORT")
 
 	log.Println("Started on port", portNum)
