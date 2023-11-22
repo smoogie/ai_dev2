@@ -11,6 +11,7 @@ const search = require('./json/searchData')
 const people = require('./json/peopleData')
 const ownapi = require('./json/ownapiData')
 const ownapipro = require('./json/ownapiproData')
+const meme = require('./json/memeData')
 
 const mapping = {
     helloapi,
@@ -25,7 +26,8 @@ const mapping = {
     search,
     people,
     ownapi,
-    ownapipro
+    ownapipro,
+    meme
 }
 
 module.exports = (task) => mapping[task]

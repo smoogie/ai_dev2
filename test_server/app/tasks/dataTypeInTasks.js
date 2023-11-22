@@ -20,7 +20,8 @@ const ReturnType = {
     "tools":TypeFunction,
     "gnome":TypeFunction,
     "ownapi":TypeJSON,
-    "ownapipro":TypeJSON
+    "ownapipro":TypeJSON,
+    "meme":TypeJSON
 }
 
 module.exports = {

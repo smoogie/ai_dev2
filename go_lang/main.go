@@ -19,6 +19,7 @@ import (
 	gnome "ai_dev/c04/l03/tools"
 	"ai_dev/c04/l04/ownapi"
 	"ai_dev/c04/l05/ownapipro"
+	"ai_dev/c05/l01/meme"
 	"github.com/joho/godotenv"
 	"github.com/urfave/cli/v2"
 	"os"
@@ -103,6 +104,10 @@ func main() {
 			{
 				Name:   "ownapipro",
 				Action: ownapipro.Command,
+			},
+			{
+				Name:   "meme",
+				Action: meme.Command,
 			},
 		},
 	}
